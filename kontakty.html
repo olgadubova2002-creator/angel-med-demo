@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты: АНГЕЛ-МЕД</title>
+<meta name="description" content="Контакты ООО «Ангел-Мед»: форма заявки на коммерческое предложение по медицинскому оборудованию.">
+<meta name="theme-color" content="#F4F8FC">
+<link rel="icon" href="assets/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,400&display=swap&subset=cyrillic">
+<link rel="stylesheet" href="vibe.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="v-page" id="root">
+<header class="hdr">
+  <a class="brand" href="index.html" aria-label="АНГЕЛ-МЕД, на главную">
+    <span class="brand__mark"><img src="assets/logo.webp" alt=""></span>
+    <span class="brand__name">АНГЕЛ-МЕД<small>Медицинское оборудование</small></span>
+  </a>
+  <nav class="nav" aria-label="Основное меню">
+    <a href="index.html">Главная</a>
+    <a href="katalog.html">Перечень оборудования</a>
+    <a href="kontakty.html" aria-current="page">Контакты</a>
+    <a class="v-btn" href="#zayavka">Запросить КП</a>
+    <details class="menu">
+      <summary>Меню</summary>
+      <div class="menu__panel">
+        <a href="index.html">Главная</a>
+        <a href="katalog.html">Перечень оборудования</a>
+        <a href="kontakty.html" aria-current="page">Контакты</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<main id="main">
+<section class="v-wrap contacts" data-v-act="flow">
+  <div>
+    <h1 class="v-display">Решим вашу задачу от технического задания до поставки</h1>
+    <dl class="clist">
+      <div><dt>Организация</dt><dd>ООО «Ангел-Мед»</dd></div>
+      <div><dt>Контактное лицо</dt><dd><span class="slot">{{контактное-лицо}}</span></dd></div>
+      <div><dt>Телефон</dt><dd><span class="slot">{{телефон}}</span></dd></div>
+      <div><dt>Почта</dt><dd><span class="slot">{{почта}}</span></dd></div>
+      <div><dt>Адрес</dt><dd><span class="slot">{{адрес}}</span></dd></div>
+      <div><dt>Часы работы</dt><dd><span class="slot">{{часы}}</span></dd></div>
+    </dl>
+    <div class="cmap">Место под карту: подключается, когда заказчик даст адрес</div>
+  </div>
+  <div class="v-stack">
+    <p class="v-lede">Индивидуальный подход: подберём оборудование под ваши требования и специфику законодательства.</p>
+    <p class="v-body v-soft">Решение под ключ: мы сами найдём производителя, подготовим документы для проверок и организуем поставку.</p>
+  </div>
+</section>
+
+<section class="v-section v-section--tight" id="zayavka" data-v-act="flow">
+  <div class="v-wrap">
+    <div class="cta">
+      <div>
+        <h2 class="v-display">Запросить коммерческое предложение</h2>
+        <p class="v-lede">Пришлите перечень позиций или техническое задание и укажите режим закупки. Подберём оборудование и подготовим документы.</p>
+        <p class="cta__note">От формирования технического задания до поставки: производителя найдём сами, документы для проверок подготовим, поставку организуем.</p>
+      </div>
+      <form class="form" action="#" method="post" novalidate>
+        <div class="form__row">
+          <label class="field"><span>Организация</span><input type="text" name="org" autocomplete="organization" required></label>
+          <label class="field"><span>Контактное лицо</span><input type="text" name="name" autocomplete="name" required></label>
+        </div>
+        <label class="field"><span>Телефон или почта</span><input type="text" name="contact" autocomplete="tel" inputmode="text" required></label>
+        <fieldset class="field">
+          <legend>Режим закупки</legend>
+          <div class="seg" role="radiogroup">
+            <label><input type="radio" name="mode" value="44" checked>44-ФЗ</label>
+            <label><input type="radio" name="mode" value="223">223-ФЗ</label>
+            <label><input type="radio" name="mode" value="?">Пока не знаю</label>
+          </div>
+        </fieldset>
+        <div class="form__req" aria-live="polite"></div>
+        <label class="field"><span>Позиции или техническое задание</span><textarea name="items" placeholder="Например: монитор пациента, 5 шт. Или приложите ТЗ ссылкой."></textarea></label>
+        <label class="consent"><input type="checkbox" required><span>Согласен на обработку персональных данных. Политика: <span class="slot">{{политика-конфиденциальности}}</span></span></label>
+        <button class="v-btn" type="submit">Запросить КП</button>
+        <p class="form__ok" role="status" tabindex="-1">Запрос сформирован. Это демо: отправка на почту <span class="slot">{{почта-заявок}}</span> подключается при переносе в Тильду.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<footer class="v-wrap">
+  <div class="foot">
+    <div>
+      <a class="brand" href="index.html" aria-label="АНГЕЛ-МЕД">
+        <span class="brand__mark"><img src="assets/logo.webp" alt=""></span>
+        <span class="brand__name">АНГЕЛ-МЕД</span>
+      </a>
+      <p style="margin-top:1rem;max-width:32ch">ООО «Ангел-Мед». Ответственное отношение и внимание к каждой детали. С любовью к делу!</p>
+    </div>
+    <div>
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="katalog.html">Перечень оборудования</a></li>
+        <li><a href="kontakty.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Контакты</h4>
+      <ul>
+        <li>Телефон: <span class="slot">{{телефон}}</span></li>
+        <li>Почта: <span class="slot">{{почта}}</span></li>
+        <li><span class="slot">{{политика-конфиденциальности}}</span></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="data.js"></script>
+<script src="vibe.js"></script>
+<script src="site.js"></script>
+<script>Vibe.mount(document.getElementById("root"));</script>
+</body>
+</html>
